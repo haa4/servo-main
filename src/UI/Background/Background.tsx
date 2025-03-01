@@ -189,13 +189,17 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
                 return undefined;
             }
 
-            return gradient.colors.map((color, index) => {
-                const ratio = gradient.ratios && gradient.ratios[index] !== undefined
-                    ? `${gradient.ratios[index] * 100}%`
-                    : `${(index / (gradient.colors.length - 1)) * 100}%`;
-                return `${color} ${ratio}`;
-            }).join(', ');
+            return gradient.colors
+                .map((color, index) => {
+                    const ratio =
+                        gradient.ratios && gradient.ratios[index] !== undefined
+                            ? `${gradient.ratios[index] * 100}%`
+                            : `${(index / (gradient.colors.length - 1)) * 100}%`;
+                    return `${color} ${ratio}`;
+                })
+                .join(", ");
         };
+
 
         // Determine gradient direction
         const getGradientDirection = () => {
