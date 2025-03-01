@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { routes, protectedRoutes } from "@/app/resources";
-import { Flex } from "@/UI/Flex/Flex";
-import { Spinner } from "@/UI/Spinner/Spinner";
-import { Input } from "@/UI/Input/Input";
-import { Button } from "@/UI/Button/Button";
-import { Heading } from "@/UI/Heading/Heading";
-import { Column } from "@/UI/Column/Column";
-import { PasswordInput } from "@/UI/PasswordInput/PasswordInput";
+import { Flex } from "@/UI/Flex";
+import { Spinner } from "@/UI/Spinner";
+import { Input } from "@/UI/Input";
+import { Button } from "@/UI/Button";
+import { Heading } from "@/UI/Heading";
+import { Column } from "@/UI/Column";
+import { PasswordInput } from "@/UI/PasswordInput";
 import NotFound from "@/app/not-found";
 
 interface RouteGuardProps {

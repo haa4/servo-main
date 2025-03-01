@@ -3,7 +3,7 @@
 // import { Projects } from "@/components/work/Projects";
 import { baseURL, routes } from "@/app/resources";
 import { company, home, about } from "@/app/resources/content";
-import { Column } from "@/UI/Column/Column";
+import { Column } from "@/UI/Column";
 import { RevealFx } from "@/UI/RevealFx/RevealFx";
 import { Heading } from "@/UI/Heading/Heading";
 import { Button } from "@/UI/Button/Button";

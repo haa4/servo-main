@@ -3,10 +3,10 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade } from "@/UI/Fade/Fade";
-import { Flex } from "@/UI/Flex/Flex";
-import { Line } from "@/UI/Line/Line";
-import { ToggleButton } from "@/UI/ToggleButton/ToggleButton";
+import { Fade } from "@/UI/Fade";
+import { Flex } from "@/UI/Flex";
+import { Line } from "@/UI/Line";
+import { ToggleButton } from "@/UI/ToggleButton";
 import styles from "@/scss/Header.module.scss";
 
 import { routes, display } from "@/app/resources";

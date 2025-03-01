@@ -1,10 +1,10 @@
 
 import { company, social } from "@/app/resources/content";
 import styles from "@/scss/Footer.module.scss";
-import { Flex } from "@/UI/Flex/Flex";
-import { Text } from "@/UI/Text/Text";
-import {SmartLink} from "@/UI/SmartLink/SmartLink";
-import {IconButton} from "@/UI/IconButton/IconButton";
+import { Flex } from "@/UI/Flex";
+import { Text } from "@/UI/Text";
+import {SmartLink} from "@/UI/SmartLink";
+import {IconButton} from "@/UI/IconButton";
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
