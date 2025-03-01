@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { Toaster } from "@/UI/Toaster/Toaster";
+import { Toaster } from "@/UI";
 
 interface Toast {
     id: string;

@@ -1,13 +1,9 @@
 "use client";
 
 import React, { ReactNode, forwardRef } from "react";
-import { ElementType } from "@/UI/ElementType/ElementType";
 import classNames from "classnames";
 
-import { Spinner } from "@/UI/Spinner/Spinner";
-import { Icon } from "@/UI/Icon/Icon";
-import { Arrow } from "@/UI/Arrow/Arrow";
-import { Flex } from "@/UI/Flex/Flex";
+import { ElementType, Spinner, Icon, Arrow, Flex } from "@/UI";
 import styles from "@/scss/Button.module.scss";
 
 interface CommonProps {

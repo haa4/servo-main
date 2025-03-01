@@ -2,8 +2,7 @@
 
 import React, { forwardRef, ReactNode } from "react";
 import classNames from "classnames";
-import { Icon } from "@/UI/Icon/Icon";
-import { ElementType } from "@/UI/ElementType/ElementType";
+import { ElementType, Icon } from "@/UI";
 
 interface CommonProps {
     prefixIcon?: string;

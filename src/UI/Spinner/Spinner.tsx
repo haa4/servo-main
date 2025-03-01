@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 
 import styles from "@/scss/Spinner.module.scss";
-import { Flex } from "@/UI/Flex/Flex";
+import { Flex } from "@/UI";
 
 interface SpinnerProps extends React.ComponentProps<typeof Flex> {
     size?: "xs" | "s" | "m" | "l" | "xl";

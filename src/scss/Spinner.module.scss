@@ -1,3 +1,4 @@
+// Spinner animation keyframes
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -19,52 +20,24 @@
   border-top-color: currentColor;
 }
 
-.xs {
-  width: var(--static-space-16);
-  height: var(--static-space-16);
-  padding: 2px;
+// Size variations
+$sizes: (
+        'xs': (size: var(--static-space-16), padding: 2px, border: 2px),
+        's': (size: var(--static-space-20), padding: 2px, border: 2px),
+        'm': (size: var(--static-space-24), padding: 3px, border: 2px),
+        'l': (size: var(--static-space-32), padding: 4px, border: 3px),
+        'xl': (size: var(--static-space-40), padding: 8px, border: 3px)
+);
 
-  .spinner {
-    border-width: 2px;
-  }
-}
+// Generate size classes
+@each $name, $values in $sizes {
+  .#{$name} {
+    width: map-get($values, size);
+    height: map-get($values, size);
+    padding: map-get($values, padding);
 
-.s {
-  width: var(--static-space-20);
-  height: var(--static-space-20);
-  padding: 2px;
-
-  .spinner {
-    border-width: 2px;
-  }
-}
-
-.m {
-  width: var(--static-space-24);
-  height: var(--static-space-24);
-  padding: 3px;
-
-  .spinner {
-    border-width: 2px;
-  }
-}
-
-.l {
-  width: var(--static-space-32);
-  height: var(--static-space-32);
-  padding: 4px;
-
-  .spinner {
-    border-width: 3px;
-  }
-}
-
-.xl {
-  width: var(--static-space-40);
-  height: var(--static-space-40);
-  padding: 8px;
-
-  .spinner {
-    border-width: 3px;
+    .spinner {
+      border-width: map-get($values, border);
+    }
   }
 }

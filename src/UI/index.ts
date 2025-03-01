@@ -17,6 +17,7 @@ export * from "./Column/Column";
 // export * from "./Dialog";
 // export * from "./Dropdown";
 // export * from "./DropdownWrapper";
+export * from "./ElementType/ElementType";
 export * from "./Fade/Fade";
 // export * from "./Feedback";
 export * from "./Flex/Flex";

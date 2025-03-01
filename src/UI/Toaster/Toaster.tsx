@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Flex } from "@/UI/Flex/Flex";
-import { Toast } from "@/UI/Toast/Toast";
+import { Flex, Toast } from "@/UI";
 import styles from "@/scss/Toaster.module.scss";
 
 interface ToasterProps {

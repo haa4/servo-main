@@ -1,13 +1,16 @@
+// Base input container
 .base {
   backdrop-filter: var(--backdrop-filter);
   min-height: var(--static-space-56);
 
-  &.focused, &.filled {
+  &.focused,
+  &.filled {
     background-color: var(--neutral-background-strong);
     border-color: var(--neutral-border-medium);
   }
 
-  &:focus-within, &:hover:not(:has(.suffix:hover)) {
+  &:focus-within,
+  &:hover:not(:has(.suffix:hover)) {
     background-color: var(--neutral-alpha-medium);
   }
 
@@ -16,6 +19,7 @@
   }
 }
 
+// Textarea specific styles
 .textareaBase {
   &::after {
     pointer-events: none;
@@ -35,6 +39,7 @@
   }
 }
 
+// Label styling
 .label {
   position: absolute;
   left: var(--static-space-16);
@@ -44,6 +49,7 @@
   transform-origin: left;
 }
 
+// Input label positioning
 .inputLabel {
   top: 50%;
   transform: translateY(-50%);
@@ -53,6 +59,7 @@
   }
 }
 
+// Textarea label positioning
 .textareaLabel {
   top: var(--static-space-16);
 
@@ -61,6 +68,7 @@
   }
 }
 
+// Size variations
 .s {
   min-height: var(--static-space-48);
 
@@ -83,6 +91,7 @@
   }
 }
 
+// Input field styling
 .input {
   width: 100%;
   height: 100%;
@@ -92,41 +101,49 @@
   padding: 0 var(--static-space-16);
   outline: none;
 
+  // Label position handling
   &.labelAsPlaceholder {
     padding-top: 0;
+
+    &.hasChildren {
+      padding-top: var(--static-space-16);
+    }
   }
 
   &:not(.labelAsPlaceholder) {
     padding-top: var(--static-space-16);
   }
 
-  &.labelAsPlaceholder.hasChildren {
-    padding-top: var(--static-space-16);
-  }
-
+  // Placeholder styling
   &::placeholder {
     color: var(--neutral-on-background-weak);
   }
 
+  // Disabled state
   &:disabled {
     background-color: var(--neutral-solid-strong);
     color: var(--neutral-on-solid-weak);
   }
 
-  &:autofill, &:-webkit-autofill {
+  // Autofill styling
+  &:autofill,
+  &:-webkit-autofill {
     background-color: var(--static-transparent) !important;
     -webkit-box-shadow: 0 0 0 var(--static-space-32) var(--neutral-background-medium) inset !important;
     -webkit-text-fill-color: var(--neutral-on-background-strong) !important;
   }
 }
 
+// Error state
 .error {
   .base {
     background-color: var(--danger-background-medium);
     border-color: var(--danger-border-medium);
   }
 
-  .input, .prefix, .suffix {
+  .input,
+  .prefix,
+  .suffix {
     color: var(--danger-on-background-medium);
   }
 
@@ -135,10 +152,13 @@
   }
 }
 
-.prefix, .suffix {
+// Prefix and suffix elements
+.prefix,
+.suffix {
   align-self: center;
 }
 
+// Color input styling
 .input[type="color"] {
   opacity: 0;
 }

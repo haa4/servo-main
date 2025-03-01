@@ -2,7 +2,7 @@
 
 import React, { CSSProperties, forwardRef, useEffect, useRef, useState } from "react";
 import { SpacingToken } from "@/components/types";
-import { Flex } from "@/UI/Flex/Flex";
+import { Flex } from "@/UI";
 import { DisplayProps } from "@/components/interfaces";
 import styles from "@/scss/Background.module.scss";
 import classNames from "classnames";

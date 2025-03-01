@@ -1,11 +1,21 @@
+// Base toast styles
 .toast {
   transition: opacity 0.3s, transform 0.3s;
-}
 
-.visible {
-  opacity: 1;
-}
+  &.visible {
+    opacity: 1;
+  }
 
-.hidden {
-  opacity: 0;
+  &.hidden {
+    opacity: 0;
+  }
+
+  // Add variant-specific styles if needed
+  &.success {
+    // Success-specific styles
+  }
+
+  &.danger {
+    // Danger-specific styles
+  }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef } from "react";
-import { Flex } from "@/UI/Flex/Flex";
+import { Flex } from "@/UI";
 
 interface LineProps extends React.ComponentProps<typeof Flex> {
     vert?: boolean;

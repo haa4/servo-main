@@ -1,10 +1,7 @@
 "use client";
 
 import React, { forwardRef, useState, useEffect, ReactNode } from "react";
-import { ElementType } from "@/UI/ElementType/ElementType";
-import { Flex } from "@/UI/Flex/Flex";
-import { Icon } from "@/UI/Icon/Icon";
-import { Tooltip } from "@/UI/Tooltip/Tooltip";
+import { ElementType, Flex, Icon, Tooltip } from "@/UI";
 import buttonStyles from "@/scss/Button.module.scss";
 import iconStyles from "@/scss/IconButton.module.scss";
 import classNames from "classnames";

@@ -1,6 +1,5 @@
-import { Column } from "@/UI/Column";
-import { Heading } from "@/UI/Heading";
-import { Text } from "@/UI/Text";
+import { Column, Heading, Text } from "@/UI";
+
 
 export default function NotFound() {
     return (

@@ -1,19 +1,24 @@
-.xs {
-  font-size: var(--static-space-16)
+// Icon size mapping
+$icon-sizes: (
+        'xs': var(--static-space-16),
+        's': var(--static-space-20),
+        'm': var(--static-space-24),
+        'l': var(--static-space-32),
+        'xl': var(--static-space-40)
+);
+
+// Generate size classes
+@each $size, $value in $icon-sizes {
+  .#{$size} {
+    font-size: $value;
+  }
 }
 
-.s {
-  font-size: var(--static-space-20)
-}
-
-.m {
-  font-size: var(--static-space-24)
-}
-
-.l {
-  font-size: var(--static-space-32)
-}
-
-.xl {
-  font-size: var(--static-space-40)
+// Add additional icon styles as needed
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: 1;
 }

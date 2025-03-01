@@ -1,3 +1,4 @@
+// Toaster container
 .toastContainer {
   position: fixed;
   bottom: var(--responsive-space-l);
@@ -5,15 +6,18 @@
   transform: translateX(-50%);
 }
 
+// Individual toast wrapper
 .toastWrapper {
   bottom: 0;
   transition: transform 0.3s, opacity 0.3s;
 }
 
+// Animation for new toasts
 .toastAnimation {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
+// Keyframes for toast entry animation
 @keyframes fadeIn {
   from {
     opacity: 0;

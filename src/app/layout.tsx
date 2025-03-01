@@ -12,10 +12,7 @@ import { home, baseURL, effects, style } from "@/app/resources";
 
 import {Geist, Geist_Mono, Inter, Source_Code_Pro} from "next/font/google";
 import "./globals.css";
-import {Flex} from "@/UI/Flex";
-import {ToastProvider} from "@/UI/ToastProvider";
-import {Column} from "@/UI/Column";
-import { Background } from "@/UI/Background";
+import { Flex, ToastProvider, Column, Background } from "@/UI";
 import React from "react";
 import DarkReaderLock from "@/components/DarkReaderLock";
 

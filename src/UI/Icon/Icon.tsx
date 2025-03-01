@@ -5,8 +5,7 @@ import classNames from "classnames";
 import { IconType } from "react-icons";
 import { iconLibrary } from "@/components/icons";
 import { ColorScheme, ColorWeight } from "@/components/types";
-import { Flex } from "@/UI/Flex/Flex";
-import { Tooltip } from "@/UI/Tooltip/Tooltip";
+import { Flex, Tooltip } from "@/UI";
 import styles from "@/scss/Icon.module.scss";
 import iconStyles from "@/scss/IconButton.module.scss";
 

@@ -1,0 +1,12 @@
+// Define the base palette
+$color-slate-100: #040816;
+$color-slate-200: #0F152B;
+$color-slate-300: #393F55;
+// ... and so on
+
+// Export as CSS variables
+:root {
+  --color-slate-100: #{$color-slate-100};
+  --color-slate-200: #{$color-slate-200};
+  // ... and so on
+}

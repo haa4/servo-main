@@ -1,0 +1,24 @@
+// Import primitives
+@import '../_primitives/colors';
+
+// Define semantic color roles
+:root {
+  // Background colors
+  --background-default: var(--color-slate-100);
+  --background-hover: var(--color-slate-200);
+
+  // Text colors
+  --text-primary: var(--color-slate-1200);
+  --text-secondary: var(--color-slate-1000);
+
+  // ... and so on
+}
+
+// Theme variations
+[data-theme="dark"] {
+  // Different values for dark theme
+}
+
+[data-theme="light"] {
+  // Different values for light theme
+}

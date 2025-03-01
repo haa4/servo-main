@@ -9,8 +9,7 @@ import React, {
     ReactNode,
 } from "react";
 import classNames from "classnames";
-import { Flex } from "@/UI/Flex/Flex";
-import { Text } from "@/UI/Text/Text";
+import { Flex, Text } from "@/UI";
 import styles from "@/scss/Input.module.scss";
 import useDebounce from "@/hooks/useDebounce";
 

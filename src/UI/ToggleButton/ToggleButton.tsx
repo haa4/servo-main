@@ -2,9 +2,7 @@
 
 import React, { forwardRef, ReactNode } from "react";
 import classNames from "classnames";
-import { ElementType } from "@/UI/ElementType/ElementType";
-import { Flex } from "@/UI/Flex/Flex";
-import { Icon } from "@/UI/Icon/Icon";
+import { ElementType, Flex, Icon } from "@/UI";
 import styles from "@/scss/ToggleButton.module.scss";
 
 interface CommonProps {

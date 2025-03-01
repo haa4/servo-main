@@ -3,8 +3,7 @@
 import React, { forwardRef, ReactNode } from "react";
 import classNames from "classnames";
 
-import { Flex } from "@/UI/Flex/Flex";
-import { Icon } from "@/UI/Icon/Icon";
+import { Flex, Icon } from "@/UI";
 
 type TooltipProps = {
     label: ReactNode;

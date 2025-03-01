@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, forwardRef } from "react";
-import { IconButton } from "@/UI/IconButton/IconButton";
-import { Input, InputProps } from "@/UI/Input/Input";
+import { IconButton, Input, InputProps } from "@/UI";
 
 export const PasswordInput = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     const [showPassword, setShowPassword] = useState(false);

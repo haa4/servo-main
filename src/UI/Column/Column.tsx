@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef } from "react";
-import { Flex } from "@/UI/Flex/Flex";
+import { Flex } from "@/UI";
 
 interface ColumnProps extends React.ComponentProps<typeof Flex> {
     children?: React.ReactNode;

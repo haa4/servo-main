@@ -1,3 +1,4 @@
+// Base button styles
 .button {
   display: flex;
   align-items: center;
@@ -9,7 +10,8 @@
   -webkit-tap-highlight-color: transparent;
   transition: var(--transition-micro-medium);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     z-index: 1;
   }
 
@@ -23,87 +25,118 @@
   }
 }
 
-.primary {
-  box-shadow: inset 0 var(--solid-inset-distance) var(--solid-inset-size) var(--solid-inset-color-brand);
-  background: var(--brand-solid-medium);
-  border-style: solid;
-  border-width: var(--solid-border-width);
-  border-color: var(--solid-border-color-brand);
-  color: var(--brand-on-solid-strong);
+// Button variants
+$button-variants: (
+        'primary': (
+                bg: var(--brand-solid-medium),
+                color: var(--brand-on-solid-strong),
+                border-color: var(--solid-border-color-brand),
+                hover-bg: var(--brand-solid-strong),
+                box-shadow-color: var(--solid-inset-color-brand)
+        ),
+        'secondary': (
+                bg: var(--neutral-background-medium),
+                color: var(--neutral-on-background-strong),
+                border-color: var(--neutral-border-medium),
+                hover-bg: var(--neutral-background-strong),
+                hover-border: var(--neutral-border-strong),
+                box-shadow-color: var(--solid-inset-color-neutral)
+        ),
+        'tertiary': (
+                bg: var(--static-transparent),
+                color: var(--neutral-on-background-strong),
+                border-color: var(--static-transparent),
+                hover-border: var(--neutral-border-medium),
+                disabled-bg: var(--static-transparent),
+                disabled-color: var(--neutral-on-background-weak)
+        ),
+        'ghost': (
+                bg: var(--static-transparent),
+                color: var(--neutral-on-background-medium),
+                border: none,
+                hover-color: var(--neutral-on-background-strong)
+        ),
+        'danger': (
+                bg: var(--danger-solid-medium),
+                color: var(--danger-on-solid-strong),
+                border-color: var(--solid-border-color-danger),
+                hover-bg: var(--danger-solid-strong),
+                box-shadow-color: var(--solid-inset-color-danger)
+        )
+);
 
-  &:hover, &:focus {
-    background: var(--brand-solid-strong);
+// Generate variant styles
+@each $variant, $styles in $button-variants {
+  .#{$variant} {
+    background: map-get($styles, bg);
+    color: map-get($styles, color);
+
+    @if map-has-key($styles, border) {
+      border: map-get($styles, border);
+    } @else {
+      border-style: solid;
+      border-width: var(--solid-border-width);
+      border-color: map-get($styles, border-color);
+    }
+
+    @if map-has-key($styles, box-shadow-color) {
+      box-shadow: inset 0 var(--solid-inset-distance) var(--solid-inset-size) map-get($styles, box-shadow-color);
+    }
+
+    &:hover,
+    &:focus {
+      @if map-has-key($styles, hover-bg) {
+        background: map-get($styles, hover-bg);
+      }
+
+      @if map-has-key($styles, hover-border) {
+        border-color: map-get($styles, hover-border);
+      }
+
+      @if map-has-key($styles, hover-color) {
+        color: map-get($styles, hover-color);
+      }
+    }
+
+    @if map-has-key($styles, disabled-bg) or map-has-key($styles, disabled-color) {
+      &:disabled {
+        @if map-has-key($styles, disabled-bg) {
+          background: map-get($styles, disabled-bg);
+        }
+
+        @if map-has-key($styles, disabled-color) {
+          color: map-get($styles, disabled-color);
+        }
+      }
+    }
   }
 }
 
-.secondary {
-  box-shadow: inset 0 var(--solid-inset-distance) var(--solid-inset-size) var(--solid-inset-color-neutral);
-  background: var(--neutral-background-medium);
-  border-style: solid;
-  border: 1px solid var(--neutral-border-medium);
-  color: var(--neutral-on-background-strong);
+// Button sizes
+$button-sizes: (
+        's': (
+                padding: var(--static-space-4) var(--static-space-8),
+                height: var(--static-space-32),
+                gap: var(--static-space-4)
+        ),
+        'm': (
+                padding: var(--static-space-8) var(--static-space-12),
+                height: var(--static-space-40),
+                gap: var(--static-space-4)
+        ),
+        'l': (
+                padding: var(--static-space-12) var(--static-space-20),
+                height: var(--static-space-48),
+                gap: var(--static-space-8)
+        )
+);
 
-  &:hover, &:focus {
-    background: var(--neutral-background-strong);
-    border-color: var(--neutral-border-strong);
+// Generate size styles
+@each $size, $styles in $button-sizes {
+  .#{$size} {
+    padding: map-get($styles, padding);
+    min-height: map-get($styles, height);
+    height: map-get($styles, height);
+    gap: map-get($styles, gap);
   }
-}
-
-.tertiary {
-  background: var(--static-transparent);
-  color: var(--neutral-on-background-strong);
-  border: 1px solid var(--static-transparent);
-
-  &:hover, &:focus {
-    border: 1px solid var(--neutral-border-medium);
-  }
-
-  &:disabled {
-    background: var(--static-transparent);
-    color: var(--neutral-on-background-weak);
-  }
-}
-
-.ghost {
-  border: none;
-  background: var(--static-transparent);
-  color: var(--neutral-on-background-medium);
-
-  &:hover, &:focus {
-    color: var(--neutral-on-background-strong);
-  }
-}
-
-.danger {
-  box-shadow: inset 0 var(--solid-inset-distance) var(--solid-inset-size) var(--solid-inset-color-danger);
-  background: var(--danger-solid-medium);
-  border-style: solid;
-  border-width: var(--solid-border-width);
-  border-color: var(--solid-border-color-danger);
-  color: var(--danger-on-solid-strong);
-
-  &:hover, &:focus {
-    background: var(--danger-solid-strong);
-  }
-}
-
-.s {
-  padding: var(--static-space-4) var(--static-space-8);
-  min-height: var(--static-space-32);
-  height: var(--static-space-32);
-  gap: var(--static-space-4);
-}
-
-.m {
-  padding: var(--static-space-8) var(--static-space-12);
-  min-height: var(--static-space-40);
-  height: var(--static-space-40);
-  gap: var(--static-space-4);
-}
-
-.l {
-  padding: var(--static-space-12) var(--static-space-20);
-  min-height: var(--static-space-48);
-  height: var(--static-space-48);
-  gap: var(--static-space-8);
 }
